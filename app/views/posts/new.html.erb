@@ -1,0 +1,18 @@
+<%= form_for @post, html: { multipart: true } do |f| %>
+  <div>
+    <%= f.label "Title"%>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label "Body"%>
+    <%= f.text_field :body %>
+  </div>
+
+  <div>
+    <%= f.label "Image"%>
+    <%= f.file_field :image, multiple: true %>
+  </div>
+
+  <%= f.submit "Submit" %>
+<% end %>
